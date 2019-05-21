@@ -7,7 +7,7 @@ class SearchBar extends React.Component {
 		return (
 			<div className="container centered">
 				<div className="md-form mt-0 small ">
-					<input className="form-control" type="text" placeholder="Search" aria-label="Search" />
+					<input className="form-control" type="text" placeholder="Search for stars" aria-label="Search" />
 				</div>
 			</div>
 		);
