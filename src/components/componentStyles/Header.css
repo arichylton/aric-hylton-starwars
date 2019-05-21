@@ -1,5 +1,9 @@
 .no-color{
-    background: rgba(0, 128, 0, 0)
+    background-image: linear-gradient(to right, rgba(53, 53, 53, 0.24), rgba(66, 66, 66, 0.233)),
+        url(../../pics/header-pic.jpg);
+        background-repeat: none;
+        background-size: cover;
+    box-shadow: 3px 0px 5px #000;
   }
 
 h1 {
@@ -31,3 +35,4 @@ hr {
 .grow:hover {
     transform: scale(1.1);
 }
+

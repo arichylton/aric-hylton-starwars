@@ -11,7 +11,7 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<div className="container centered">
+			<div className="container centered searchBar">
 				<div className="md-form mt-0 small animated rubberBand">
 					<input className="form-control" type="text" placeholder="Search for the stars" aria-label="Search" onChange={(event) => this.updateInputValue(event.target.value)} />
 				</div>

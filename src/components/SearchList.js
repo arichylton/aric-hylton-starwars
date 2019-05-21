@@ -10,7 +10,7 @@ class SearchList extends React.Component {
         this.props.getStars();       
     }
 
-    renderSearchItemList = () => {
+    renderSearchPeopleList = () => {
         return this.props.data.filter(user => user.name.toLowerCase().includes(this.props.searchTerm.toLowerCase())).map((user, i) => {
             return (
                 <SearchItem
@@ -38,7 +38,7 @@ class SearchList extends React.Component {
         } else {
             return (
                 <div className="container searchListPadding">
-                    {this.renderSearchItemList()}
+                        {this.renderSearchPeopleList()}                                  
                 </div>
             )
         }       
