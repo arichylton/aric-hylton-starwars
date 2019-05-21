@@ -1,5 +1,6 @@
-import { combineReducers } from 'react-redux';
+import { combineReducers } from 'redux';
+import getDataReducer from './getDataReducer';
 
 export default combineReducers({
-    add: () => 2 + 3
+    getData: getDataReducer
 })
