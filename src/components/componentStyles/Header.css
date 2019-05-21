@@ -1,0 +1,33 @@
+.no-color{
+    background: rgba(0, 128, 0, 0)
+  }
+
+h1 {
+    letter-spacing: 10px;
+}
+
+.jumbotron {
+    padding-bottom: 20px;
+}
+
+p {
+    font-size: 60%;
+    margin-top: 20px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+hr {
+    height: 1.5px;
+    background-color: white;
+    max-width: 450px;
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.2);
+}

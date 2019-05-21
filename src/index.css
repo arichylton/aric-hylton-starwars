@@ -1,13 +1,12 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Anton', cursive;
+    color: white;
+	background-image: linear-gradient(to right, rgba(53, 53, 53, 0.24), rgba(66, 66, 66, 0.233)),
+		url(./pics/background.jpg);
+	background-attachment: fixed;
+    background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+
+
+

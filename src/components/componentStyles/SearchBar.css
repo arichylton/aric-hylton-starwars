@@ -1,0 +1,8 @@
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.small {
+    width: 30vw;
+}
