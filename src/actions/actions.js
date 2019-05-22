@@ -13,6 +13,21 @@ export const getStars = () => async dispatch => {
     }
 }
 
+export const getFilms = () => async dispatch => {
+    dispatch({ type: 'GET_FILMS_PENDING' });
+
+    try {
+        const response = await fetch('https://swapi.co/api/films/');
+        const data = await response.json();
+    
+        console.log(data.results);
+    
+        dispatch({ type: 'GET_FILMS', payload: data.results });
+    } catch (err) {
+        dispatch({ type: 'GET_FILMS_FAILURE', payload: err })
+    }
+}
+
 export const searchItem = text => {
     return {
         type: 'SEARCH_FIELD',

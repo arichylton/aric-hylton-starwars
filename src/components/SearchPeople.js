@@ -2,7 +2,7 @@ import React from 'react';
 
 import './componentStyles/SearchItem.css';
 
-class SearchItem extends React.Component {
+class SearchPeople extends React.Component {
 	render() {
 		const { name, height, mass, eyeColor } = this.props;
 
@@ -19,4 +19,4 @@ class SearchItem extends React.Component {
 	}
 }
 
-export default SearchItem;
+export default SearchPeople;

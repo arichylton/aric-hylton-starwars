@@ -9,3 +9,11 @@ h4{
     word-spacing: 10px;
     line-height: 40px;
 }
+
+h3 {
+    font-size: 140%;
+    font-style: italic;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    line-height: 40px;
+}

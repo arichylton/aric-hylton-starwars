@@ -11,7 +11,7 @@ h1 {
 }
 
 .jumbotron {
-    padding-bottom: 5px;
+    padding-bottom: 50px;
 }
 
 p {
@@ -22,7 +22,7 @@ p {
     font-style: italic;
 }
 
-hr {
+.headerHR {
     height: 1.5px;
     background-color: white;
     max-width: 450px;
