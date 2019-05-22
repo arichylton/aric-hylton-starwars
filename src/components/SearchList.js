@@ -1,8 +1,9 @@
 import React from 'react';
-import { getStars, getFilms } from '../actions/actions';
+import { getStars, getFilms, getStarShips } from '../actions/actions';
 import { connect } from 'react-redux';
 
 import SearchPeople from './SearchPeople';
+import SearchStarShips from './SearchStarShips';
 import SearchFilm from './SearchFilm';
 import './componentStyles/SearchList.css';
 
@@ -10,6 +11,7 @@ class SearchList extends React.Component {
     componentDidMount() {
         this.props.getStars();       
         this.props.getFilms();       
+        this.props.getStarShips();
     }
 
     renderSearchPeopleList = () => {
@@ -40,6 +42,20 @@ class SearchList extends React.Component {
             )
         });
     }
+
+    renderSearchStarShipsList = () => {
+        return this.props.starShipData.filter(starship => starship.name.toLowerCase().includes(this.props.searchTerm.toLowerCase())).map((starship, i) => {
+            return (
+                <SearchStarShips
+                    key={i}
+                    model={starship.model}
+                    name={starship.name}
+                    passenger={starship.passengers}
+                    cost={starship.cost_in_credits}
+                />    
+            )
+        });
+    }
     
 
     render() {
@@ -53,13 +69,12 @@ class SearchList extends React.Component {
             )
         } else {
             return (
-                <div style={{marginTop: 140 }}>
+                <div style={{marginTop: 60 }}>
 
                     <div className="container searchListPadding">                   
-                        {this.renderSearchFilmsList()}                                  
-                    </div>
-                    <div className="container searchListPadding">                   
-                        {this.renderSearchPeopleList()}                                  
+                        {this.renderSearchFilmsList()}                                                                  
+                        {this.renderSearchPeopleList()}
+                        {this.renderSearchStarShipsList()}                               
                     </div>                    
                 </div>
                 
@@ -76,8 +91,11 @@ const mapStateToProps = state => {
         filmData: state.getFilms.data,
         filmIsPending: state.getFilms.isPending,
         filmError: state.getFilms.error,
+        starShipData: state.getStarShips.data,
+        starShipIsPending: state.getStarShips.isPending,
+        starShipError: state.getStarShips.error,
         searchTerm: state.searchTerm.text
     };
 }
 
-export default connect(mapStateToProps, { getStars, getFilms })(SearchList);
+export default connect(mapStateToProps, { getStars, getFilms, getStarShips })(SearchList);

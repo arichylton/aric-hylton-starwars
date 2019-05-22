@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
 					<input
 						className="form-control"
 						type="text"
-						placeholder="Search for the stars"
+						placeholder="Search"
 						value={this.props.text}
 						ref={(input) => {
 							this.nameInput = input;
