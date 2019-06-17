@@ -1,4 +1,6 @@
 .footerBackground {
+    position: relative;
+
     height: 70px;
     margin-top: 60px;
     background: #888;

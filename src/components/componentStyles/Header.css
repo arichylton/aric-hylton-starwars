@@ -14,6 +14,13 @@ h1 {
     padding-bottom: 50px;
 }
 
+.centered {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 p {
     font-size: 60%;
     margin-top: 20px;
@@ -23,6 +30,7 @@ p {
 }
 
 .headerHR {
+    width: 400px;
     height: 1.5px;
     background-color: white;
     max-width: 450px;
