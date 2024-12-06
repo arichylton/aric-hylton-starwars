@@ -13,6 +13,16 @@
 		"tachyons": "^4.11.1",
 		"thunk": "0.0.1"
 	},
+	"AWSTemplateFormatVersion": "2010-09-09",
+	"Description": "A sample CloudFormation template.",
+	"Resources": {
+		"MyS3Bucket": {
+			"Type": "AWS::S3::Bucket",
+			"Properties": {
+				"BucketName": "starwars-project"
+			}
+		}
+	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
